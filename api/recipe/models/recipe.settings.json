@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "recipes",
+  "info": {
+    "name": "Recipe",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "ingredients": {
+      "type": "text"
+    }
+  }
+}
